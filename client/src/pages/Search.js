@@ -258,19 +258,11 @@ class Search extends Component {
                         </div>
                   ))}
                 </div>
-<<<<<<< HEAD
-                    ) : (
-                        <h4>No Results to Display</h4>
-                    )}
-         
-        </Jumbotron2>
-=======
               ) : (
                   <h4>No Results to Display</h4>
                 )}
 
             </Jumbotron2>
->>>>>>> ef6a4a271e6b9db556fd16113353f378fd52ec7e
           </Col>
           <Col size="md-2"></Col>
         </Row>
