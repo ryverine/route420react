@@ -30,7 +30,10 @@ button {
 }
 
 #jumbotron2 {
-    background-color:#212121;
+    background-color: #025F4F;
     color: white;
+    background-size: contain;
+    margin: auto;
+    text-align: center;
 }
 
