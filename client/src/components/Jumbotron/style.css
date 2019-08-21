@@ -23,14 +23,6 @@ button {
     display: block;
 }
 
-#jumbotron2 {
-    background-color: #025F4F;
-    color: white;
-    background-size: contain;
-    margin: auto;
-    text-align: center;
-}
-
 #jumbotron {
     background-color: #025F4F;
     color: white;
