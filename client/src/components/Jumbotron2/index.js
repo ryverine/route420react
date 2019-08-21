@@ -4,9 +4,9 @@ import "./style.css";
 
 //"../utils/userContext";
 
-function Jumbotron({ children }) {
+function Jumbotron2({ children }) {
   return (
-    <div className="jumbotron" id="jumbotron">
+    <div className="jumbotron2" id="jumbotron2">
       {children}
 
     </div>
@@ -14,4 +14,4 @@ function Jumbotron({ children }) {
   );
 }
 
-export default Jumbotron;
+export default Jumbotron2;

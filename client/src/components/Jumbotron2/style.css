@@ -1,3 +1,9 @@
+#jumbotron {
+    background-color: #025F4F;
+    color: white;
+    background-size: contain;
+}
+
 button {
     background-color: #6CAA01;
     color: white;
@@ -24,16 +30,7 @@ button {
 }
 
 #jumbotron2 {
-    background-color: #025F4F;
+    background-color:#212121;
     color: white;
-    background-size: contain;
-    margin: auto;
-    text-align: center;
-}
-
-#jumbotron {
-    background-color: #025F4F;
-    color: white;
-    background-size: contain;
 }
 

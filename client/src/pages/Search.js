@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 //import SaveBtn from "../components/SaveBtn";
 import Jumbotron from "../components/Jumbotron";
+import Jumbotron2 from "../components/Jumbotron2";
 //import NewsFeed from "../components/NewsFeed";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
-import "../components/Jumbotron/style.css";
+// import "../components/Jumbotron/style.css";
 //import { ResultList, ResultItem } from "../components/Results";
 
 class Search extends Component {
@@ -214,19 +215,19 @@ class Search extends Component {
       <Container fluid>
         <Row>
           <Col size="md-2"> </Col>
-
           <Col size="md-8">
             <br />
-            <Jumbotron id="jumbotron">
+            <Jumbotron>
 
               <Row>
               <Col size="md-1"></Col>
                 <Col size="md-7">
                   <h1 id="title">Never be without CBD ever again.</h1>
                   <br />
-                  <h2 id="subtitle">Find what you want and where it's sold.</h2>
+                  <h2 id="subtitle">Find what you want and where it's sold!</h2>
                   <br />
 
+                <div className="form">
                   <form className="form-inline mr-auto mb-4">
 
                   <input className="form-control mr-sm-2" type="text" placeholder="Search for a Product!" aria-label="Search" />
@@ -234,10 +235,9 @@ class Search extends Component {
                   <button className="btn purple-gradient btn-rounded btn-sm my-0 waves-effect waves-light" type="submit">Find Product</button>
 
                   </form>
+                </div>
 
                 </Col>
-
-          
 
                 <Col size="3">
                   <img src="../../assets/images/route420-icon.svg" id="homeLogo" />
@@ -248,35 +248,16 @@ class Search extends Component {
             </Jumbotron>
 
             <Col size="md-2"></Col>
-
-{/* //==================================================================== */}
-            {/* <form>
-              <Input
-                value={this.state.searchTerms}
-                onChange={this.handleInputChange}
-                name="searchTerms"
-                placeholder="Search for a Product!"
-              />
-              <FormBtn
-                disabled={!(this.state.searchTerms)}
-                onClick={this.doProductSearch}
-              >
-                Find Product
-              </FormBtn>
-            </form> */}
-
-{/* //==================================================================== */}
-
-
-
+            </Col>
+            </Row>
 
 {/* //===================================================================== */}
-            </Col>
-            
-        </Row>
+
         <Row>
         <Col size="md-2"></Col>
         <Col size="md-8">
+        <br />
+        <Jumbotron2>
                 {this.state.results.length ? (
                 <div>
                 <h4>Products Found</h4>
@@ -289,6 +270,8 @@ class Search extends Component {
                     ) : (
                         <h4>No Results to Display</h4>
                     )}
+         
+          </Jumbotron2>
           </Col>
           <Col size="md-2"></Col>
         </Row>
