@@ -52,8 +52,7 @@ class Search extends Component {
       .catch(err => console.log(err));
     */};
 
-  doGoogleBooksSearch = event =>
-  {/*
+  doGoogleBooksSearch = event => {/*
     event.preventDefault();
     var searchText = this.state.title.trim();
     API.googleBooksSearch(searchText).then(res => 
@@ -125,8 +124,7 @@ class Search extends Component {
       });
     */};
 
-  doProductSearch = event =>
-  {
+  doProductSearch = event => {
     event.preventDefault();
     var searchBy = this.state.filter;
     var searchTerms = this.state.searchTerms.trim().toLowerCase();
@@ -134,8 +132,7 @@ class Search extends Component {
     var formatSearchTerms = searchTerms.split(' ').join('+').trim();
     searchBy = "name"; // for now filter is hard-coded, we do want the user to select their filter (name, brand, tag)
 
-    switch (searchBy) 
-    {
+    switch (searchBy) {
       case "name":
         this.searchByName(formatSearchTerms);
         break;
@@ -151,8 +148,7 @@ class Search extends Component {
     }
   }
 
-  searchByName = (searchTerm) =>
-  {
+  searchByName = (searchTerm) => {
     console.log("(pages/Search.js) Searching By Name: " + searchTerm);
 
     API.searchProductByName(searchTerm)
@@ -195,13 +191,11 @@ class Search extends Component {
 
   }
 
-  searchByBrand = (searchTerm) =>
-  {
+  searchByBrand = (searchTerm) => {
     console.log("Searching By Name: " + searchTerm);
   }
 
-  searchByTag = (searchTerm) =>
-  {
+  searchByTag = (searchTerm) => {
     console.log("Searching By Name: " + searchTerm);
   }
 
@@ -215,22 +209,22 @@ class Search extends Component {
             <br />
             <Jumbotron>
               <Row>
-              <Col size="md-1"></Col>
+                <Col size="md-1"></Col>
                 <Col size="md-7">
                   <h1 id="title">Never be without CBD ever again.</h1>
                   <br />
                   <h2 id="subtitle">Find what you want and where it's sold!</h2>
                   <br />
 
-                <div className="form">
-                  <form className="form-inline mr-auto mb-4">
+                  <div className="form">
+                    <form className="form-inline mr-auto mb-4">
 
-                  <input className="form-control mr-sm-2" type="text" placeholder="Search for a Product!" aria-label="Search" />
+                      <input className="form-control mr-sm-2" type="text" placeholder="Search for a Product!" aria-label="Search" />
 
-                  <button className="btn purple-gradient btn-rounded btn-sm my-0 waves-effect waves-light" type="submit">Find Product</button>
+                      <button className="btn purple-gradient btn-rounded btn-sm my-0 waves-effect waves-light" type="submit">Find Product</button>
 
-                  </form>
-                </div>
+                    </form>
+                  </div>
 
                 </Col>
 
@@ -241,32 +235,32 @@ class Search extends Component {
                 <Col size="md-1"></Col>
               </Row>
             </Jumbotron>
-            </Col>
-            <Col size="md-2"></Col>
-           
-            </Row>
+          </Col>
+          <Col size="md-2"></Col>
 
-{/* //===================================================================== */}
+        </Row>
+
+        {/* //===================================================================== */}
 
         <Row>
-        <Col size="md-2"></Col>
-        <Col size="md-8">
-        <br />
-        <Jumbotron2>
-                {this.state.results.length ? (
+          <Col size="md-2"></Col>
+          <Col size="md-8">
+            <br />
+            <Jumbotron2>
+              {this.state.results.length ? (
                 <div>
-                <h4>Products Found</h4>
-                        {this.state.results.map(product => (
-                        <div key={product._id}>
-                          <a href={"/product/" + product._id}><strong>{product.name}</strong></a> ({product.brand})   
+                  <h4>Products Found</h4>
+                  {this.state.results.map(product => (
+                    <div key={product._id}>
+                      <a href={"/product/" + product._id}><strong>{product.name}</strong></a> ({product.brand})
                         </div>
-                        ))}
+                  ))}
                 </div>
-                    ) : (
-                        <h4>No Results to Display</h4>
-                    )}
-         
-          </Jumbotron2>
+              ) : (
+                  <h4>No Results to Display</h4>
+                )}
+
+            </Jumbotron2>
           </Col>
           <Col size="md-2"></Col>
         </Row>

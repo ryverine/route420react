@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-// import SaveBtn from "../components/SaveBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
 import DeleteBtn from "../components/DeleteBtn";
-// import UserContext from "../utils/userContext";
 
 class User extends Component {
     state = {
@@ -25,47 +23,33 @@ class User extends Component {
         });
     };
 
-    componentDidMount() 
-    {
-        // console.log("window.location.href = " + window.location.href);
-        // http://localhost:3000/store/5d474e210953e00dbc14734e
-        //var url = window.location.href;
-        //var urlArray = url.split("/");
-        //console.log("urlArray" + urlArray);
-        // this.loadStore(urlArray[urlArray.length - 1]);
-
-        // check local storage
-        // if user data && userID != 0
-        if(JSON.parse(localStorage.getItem('currentUser')) != null)
-        {
+    componentDidMount() {
+        if (JSON.parse(localStorage.getItem('currentUser')) != null) {
             //  -> put local storage data into state --- but state will not have data
             var currentUser = JSON.parse(localStorage.getItem('currentUser'));
             this.loadUser(currentUser.email, currentUser.password);
         }
-        else
-        {
+        else {
             // -> use whatever state has
             this.loadUser(this.state.email, this.state.password);
         }
     }
 
     loadUser = (email, password) => {
-        console.log("loadUser("+email+","+password+")");
+        console.log("loadUser(" + email + "," + password + ")");
         API.getUser(email + "+" + password)
-            .then(res => 
-            {
+            .then(res => {
                 console.log("getUser response:", res);
 
-                if (res.data === null)
-                {
-                    console.log ("RES.DATA IS NULL");
+                if (res.data === null) {
+                    console.log("RES.DATA IS NULL");
                     localStorage.removeItem("currentUser");
 
                     // alert("Login Unsuccessful!");
                     // cant do this here becasue it will fire on page load.
                     // maybe return 
 
-                    this.setState({ 
+                    this.setState({
                         userID: "0",
                         admin: false,
                         firstName: "",
@@ -75,8 +59,7 @@ class User extends Component {
                         storecomments: []
                     });
                 }
-                else
-                {
+                else {
                     //empty local storage
                     localStorage.removeItem("currentUser");
                     // put data in local storage
@@ -90,7 +73,7 @@ class User extends Component {
                     }));
                     // update state
 
-                    this.setState({ 
+                    this.setState({
                         userID: res.data._id,
                         admin: res.data.admin,
                         firstName: res.data.firstName,
@@ -101,12 +84,11 @@ class User extends Component {
                     });
                 }
             }
-          )
-          .catch(err => console.log(err));
+            )
+            .catch(err => console.log(err));
     };
 
-    doSignIn = event =>
-    {
+    doSignIn = event => {
         event.preventDefault();
         console.log("Sign-In");
         // console.log("Email: " + this.state.email);
@@ -114,24 +96,23 @@ class User extends Component {
         this.loadUser(this.state.email, this.state.password);
     };
 
-    doSignOut = event =>
-    {
+    doSignOut = event => {
         event.preventDefault();
         //var confirmSignOut = confirm("Are your sure you want to Sign-Out?");
         //if(confirmSignOut)
         //{
-            //empty local storage
-            localStorage.removeItem("currentUser");
-            //update state
-            this.setState({
-                userID: "0",
-                admin: false,
-                firstName: "",
-                lastName: "",
-                email: "",
-                password: "",
-                storecomments: []
-            });
+        //empty local storage
+        localStorage.removeItem("currentUser");
+        //update state
+        this.setState({
+            userID: "0",
+            admin: false,
+            firstName: "",
+            lastName: "",
+            email: "",
+            password: "",
+            storecomments: []
+        });
         //}
     };
 
@@ -140,116 +121,136 @@ class User extends Component {
         console.log("DELETE COMMENT:", commentID);
         console.log("e:", e);
 
-        API.deleteComment(commentID, "user").then(res =>
-        {
+        API.deleteComment(commentID, "user").then(res => {
             console.log("COMMENT DELETED:", res);
             this.loadUser(this.state.email, this.state.password);
         });
     }
 
-    render() 
-    {
-        if(this.state.userID === "0")
-        {
+    render() {
+        if (this.state.userID === "0") {
             return (
                 <Container fluid>
-                <Row>
-                    <Col size="md-2"></Col>
-                    <Col size="md-8">
-                        <Jumbotron>
-                            <h1>User Profile</h1>
-                        </Jumbotron>
+                    <Row>
+                        <Col size="md-2"></Col>
+                        <Col size="md-8">
                         <br />
-                        <form>
-                            <Input
-                            type="email"
-                            value={this.state.email}
-                            onChange={this.handleInputChange}
-                            name="email"
-                            placeholder="Email (required)"
-                            />
-                            <br />
-                            <Input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.handleInputChange}
-                            name="password"
-                            placeholder="Password (required)"
-                            />
-                            <br />
-                            <FormBtn
-                            disabled={!(this.state.email)}
-                            onClick={this.doSignIn}
-                            >
-                            Sign-In
+                            <Jumbotron>
+                            <Row>
+                            <Col size="md-1"></Col>
+                            <Col size="3">
+                                <img src="../../assets/images/route420-icon.svg" id="locLogo" />
+                            </Col>
+                            <Col size="md-1"></Col>
+                            <Col size="md-6">
+                                <h1 id="otherTitle">Your Account</h1>
+
+                                <h2 id="subtitle">Login below to access your profile! </h2>
+                            </Col>
+                            <Col size="md-1"></Col>
+                            </Row>
+                            </Jumbotron>
+
+                        </Col>
+                        <Col size="md-2"></Col>
+                        </Row>
+
+                        <Row>
+                        <Col size="md-2"></Col>
+                        <Col size="md-8">
+                        <br />
+
+
+                            <form>
+                                <Input
+                                    type="email"
+                                    value={this.state.email}
+                                    onChange={this.handleInputChange}
+                                    name="email"
+                                    placeholder="Email (required)"
+                                />
+                                <br />
+                                <Input
+                                    type="password"
+                                    value={this.state.password}
+                                    onChange={this.handleInputChange}
+                                    name="password"
+                                    placeholder="Password (required)"
+                                />
+                                <br />
+                                <FormBtn
+                                    disabled={!(this.state.email)}
+                                    onClick={this.doSignIn}
+                                >
+                                    Sign-In
                             </FormBtn>
-                        </form>
-                    </Col>
-                    <Col size="md-2"></Col>
-                </Row>
+                            </form>
+
+                        </Col> {/* end md-8 col */}
+                        <Col size="md-2"></Col>
+                    </Row>
                 </Container>
             );
         }
-        else
-        {
+        else {
             return (
-           
+
                 <Container fluid>
-                <Row>
-                <Col size="md-2"></Col>
-                    <Col size="md-8">
-                    <Jumbotron>
-                        <h1>User Profile</h1>
-                    </Jumbotron>
-                    <br />
-                    <form>
-                        <FormBtn
-                        onClick={this.doSignOut}
-                        >
-                        Sign-Out
+                    <Row>
+                        <Col size="md-2"></Col>
+                        <Col size="md-8">
+                            <Jumbotron>
+                                <h1>User Profile</h1>
+                            </Jumbotron>
+                            <br />
+                            <form>
+                                <FormBtn
+                                    onClick={this.doSignOut}
+                                >
+                                    Sign-Out
                         </FormBtn>
-                    </form>
-                    <div>
-                        <h4>Welcome back, {this.state.firstName}!</h4>
-                        <div>
-                            Name: {this.state.firstName} {this.state.lastName}
-                        </div>
-                        <div>
-                            Email: {this.state.email}
-                        </div>
-                        {this.state.admin ? (
-                            <div><strong>
-                                <a href="admin/">Admin Dashboard</a>
-                            </strong></div>
-                        ) : ( 
-                            <React.Fragment />
-                        )}
-                        <div>
-                            <h4>Comment History</h4>
+                            </form>
                             <div>
-                            {this.state.storecomments.length ? (
+                                <h4>Welcome back, {this.state.firstName}!</h4>
                                 <div>
-                                    {this.state.storecomments.map(comment => (
-                                        <div key={comment._id}> 
-                                            <strong><a href={"store/" + comment.store}>Store Name</a></strong><br /> 
-                                            Posted: {comment.updated}<br /> 
-                                            {comment.comment}<br />
-
-                                            <DeleteBtn onClick={(e) => this.deleteComment(comment._id, e)}>Delete</DeleteBtn>
-                                            
-                                        </div>
-                                    ))}
+                                    Name: {this.state.firstName} {this.state.lastName}
                                 </div>
-                            ) : (
-                                <div>No Comments</div>
-                            )}
-                        </div>
+                                <div>
+                                    Email: {this.state.email}
+                                </div>
+                                {this.state.admin ? (
+                                    <div><strong>
+                                        <a href="admin/">Admin Dashboard</a>
+                                    </strong></div>
+                                ) : (
+                                        <React.Fragment />
+                                    )}
+                                <div>
+                                    <h4>Comment History</h4>
+                                    <div>
+                                        {this.state.storecomments.length ? (
+                                            <div>
+                                                {this.state.storecomments.map(comment => (
+                                                    <div key={comment._id}>
+                                                        <strong><a href={"store/" + comment.store}>Store Name</a></strong><br />
+                                                        Posted: {comment.updated}<br />
+                                                        {comment.comment}<br />
 
-                        </div>
-                    </div>
-                    </Col>
-                    <Col size="md-2"></Col>
-                </Row>
+                                                        <DeleteBtn onClick={(e) => this.deleteComment(comment._id, e)}>Delete</DeleteBtn>
+
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                                <div>No Comments</div>
+                                            )}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </Col>
+                        <Col size="md-2"></Col>
+                    </Row>
                 </Container>
             );
         }
