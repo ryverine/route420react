@@ -10,6 +10,14 @@ button {
     font-family: 'Cabin', sans-serif;
 }
 
+#locationTitle {
+    text-shadow:4px 4px 2px rgba(150,150,150,0.1);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: 'Cabin', sans-serif;
+    padding: 70px 0px 0px 0px;
+}
+
 #subtitle {
     font-weight: 300;
     margin-bottom: 1.5rem;
@@ -21,6 +29,14 @@ button {
     width: 250px;
     margin: auto;    
     display: block;
+}
+
+#locLogo {
+    margin: auto;    
+    display: block;
+    transform: rotate(-15deg);
+    max-width: 225px;
+    min-width: 225px;
 }
 
 #jumbotron {

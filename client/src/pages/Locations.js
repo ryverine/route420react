@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-//import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
-import NewsFeed from "../components/NewsFeed";
+import Jumbotron2 from "../components/Jumbotron2";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
-//import { List, ListItem } from "../components/List";
-//import UserContext from "../utils/userContext";
-//import JumboTester from "../components/JumboTester";
+
 
 
 class Locations extends Component {
@@ -34,47 +31,60 @@ class Locations extends Component {
 render() {
     return (
      
-        <Container fluid>
-            <Row>
-                <Col size="md-2"></Col>
-                <Col size="md-8">
-                    
-                    <Jumbotron>
-                      <h1>All Locations</h1>
-                    </Jumbotron>
-                  
-                    <div>
-                    {this.state.locations.length ? (
-                        <div>
-                        {this.state.locations.map(location => (
-                            <div key={location._id}> 
-                                <strong>{location.city}, {location.state}</strong>
-                                {location.stores.length ? (
-                                    <div>
-                                    {location.stores.map(store => (
-                                        <div key={store._id}>
-                                            <strong><a href={"store/" + store._id}>{store.name}</a></strong><br />
-                                            {store.addressLine1}<br />
-                                            {store.city}, {store.state} {store.zip}
-                                        </div>
-                                    ))}
-                                    </div>
-                                    ) : (
-                                    <div>No Stores for location</div>
-                                    )}
-                            </div>
-                        ))} 
-                        </div>
-                    ) : (
-                    <h3>No Locations to Display</h3>
-                    )}
-            </div>
+<Container fluid>
+  <Row>
+    <Col size="md-2"></Col>
+    <Col size="md-8">
 
-
-          </Col>
+      <Jumbotron>
+        <Row>
           <Col size="md-2"></Col>
+          <Col size="3">
+            <img src="../../assets/images/route420-icon.svg" id="locLogo" />
+          </Col>
+          <Col size="md-6">
+            <h1 id="locationTitle">Store Locations</h1>
+            
+            <h2 id="subtitle">Browse dispensaries by city!</h2>
+          </Col>
+          <Col size="md-1"></Col>
         </Row>
-      </Container>
+      </Jumbotron>
+
+<Jumbotron2>
+      <div>
+        {this.state.locations.length ? (
+        <div>
+        {this.state.locations.map(location => (
+        <div key={location._id}> 
+        <strong> {location.city}, {location.state} </strong>
+        {location.stores.length ? (
+        <div> {location.stores.map(store => (
+        <div key={store._id}>
+        <strong> <a href={"store/" + store._id}>{store.name} </a></strong><br />
+        {store.addressLine1}
+        <br />
+        {store.city}, {store.state} {store.zip}
+        </div>
+        ))}
+        </div>
+        ) : (
+        <div>No Stores for location</div>
+        )}
+        </div>
+        ))} 
+        </div>
+        ) : (
+        <h3>No Locations to Display</h3>
+        )}
+      </div>
+
+      </Jumbotron2>
+
+    </Col>  {/* end of md-8 col */}
+    <Col size="md-2"></Col>
+  </Row>
+</Container>
       
     );
   }

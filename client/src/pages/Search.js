@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-//import SaveBtn from "../components/SaveBtn";
 import Jumbotron from "../components/Jumbotron";
 import Jumbotron2 from "../components/Jumbotron2";
-//import NewsFeed from "../components/NewsFeed";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
-import { Input, FormBtn } from "../components/Form";
-// import "../components/Jumbotron/style.css";
-//import { ResultList, ResultItem } from "../components/Results";
+
 
 class Search extends Component {
   state = {
