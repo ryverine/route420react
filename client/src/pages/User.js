@@ -134,33 +134,31 @@ class User extends Component {
                     <Row>
                         <Col size="md-2"></Col>
                         <Col size="md-8">
-                        <br />
+                            <br />
                             <Jumbotron>
-                            <Row>
-                            <Col size="md-1"></Col>
-                            <Col size="3">
-                                <img src="../../assets/images/route420-icon.svg" id="locLogo" />
-                            </Col>
-                            <Col size="md-1"></Col>
-                            <Col size="md-6">
-                                <h1 id="otherTitle">Your Account</h1>
+                                <Row>
+                                    <Col size="md-1"></Col>
+                                    <Col size="3">
+                                        <img src="../../assets/images/route420-icon.svg" id="locLogo" />
+                                    </Col>
+                                    <Col size="md-1"></Col>
+                                    <Col size="md-6">
+                                        <h1 id="otherTitle">Your Account</h1>
 
-                                <h2 id="subtitle">Login below to access your profile! </h2>
-                            </Col>
-                            <Col size="md-1"></Col>
-                            </Row>
+                                        <h2 id="subtitle">Login below to access your profile! </h2>
+                                    </Col>
+                                    <Col size="md-1"></Col>
+                                </Row>
                             </Jumbotron>
 
                         </Col>
                         <Col size="md-2"></Col>
-                        </Row>
+                    </Row>
 
-                        <Row>
+                    <Row>
                         <Col size="md-2"></Col>
                         <Col size="md-8">
-                        <br />
-
-
+                            <br />
                             <form>
                                 <Input
                                     type="email"
@@ -183,7 +181,7 @@ class User extends Component {
                                     onClick={this.doSignIn}
                                 >
                                     Sign-In
-                            </FormBtn>
+                                </FormBtn>
                             </form>
 
                         </Col> {/* end md-8 col */}
@@ -199,42 +197,70 @@ class User extends Component {
                     <Row>
                         <Col size="md-2"></Col>
                         <Col size="md-8">
-                            <Jumbotron>
-                                <h1>User Profile</h1>
+                        <Jumbotron>
+                                <Row>
+                                    <Col size="md-1"></Col>
+                                    <Col size="3">
+                                        <img src="../../assets/images/route420-icon.svg" id="locLogo" />
+                                    </Col>
+                                    <Col size="md-1"></Col>
+                                    <Col size="md-6">
+                                        <h1 id="otherTitle">Route 420</h1>
+
+                                        <h2 id="subtitle">Welcome to your profile! Access comment history below </h2>
+                                    </Col>
+                                    <Col size="md-1"></Col>
+                                </Row>
                             </Jumbotron>
+
                             <br />
+
                             <form>
                                 <FormBtn
                                     onClick={this.doSignOut}
                                 >
                                     Sign-Out
-                        </FormBtn>
+                                 </FormBtn>
+
                             </form>
+
                             <div>
                                 <h4>Welcome back, {this.state.firstName}!</h4>
+
+                                <br />
+
                                 <div>
                                     Name: {this.state.firstName} {this.state.lastName}
                                 </div>
+
+                                <br />
+
                                 <div>
                                     Email: {this.state.email}
                                 </div>
+
                                 {this.state.admin ? (
-                                    <div><strong>
-                                        <a href="admin/">Admin Dashboard</a>
-                                    </strong></div>
+                                    <div> 
+                                    <strong> <a href="admin/">Admin Dashboard</a> </strong> 
+                                    </div>
                                 ) : (
                                         <React.Fragment />
                                     )}
                                 <div>
+                                <br />
                                     <h4>Comment History</h4>
+                                    <br />
                                     <div>
                                         {this.state.storecomments.length ? (
                                             <div>
                                                 {this.state.storecomments.map(comment => (
                                                     <div key={comment._id}>
-                                                        <strong><a href={"store/" + comment.store}>Store Name</a></strong><br />
-                                                        Posted: {comment.updated}<br />
-                                                        {comment.comment}<br />
+                                                        <strong> <a href={"store/" + comment.store}> Store Name </a> </strong>
+                                                        <br />
+                                                        Posted: {comment.updated}
+                                                        <br />
+                                                        {comment.comment}
+                                                        <br />
 
                                                         <DeleteBtn onClick={(e) => this.deleteComment(comment._id, e)}>Delete</DeleteBtn>
 
@@ -242,6 +268,7 @@ class User extends Component {
                                                 ))}
                                             </div>
                                         ) : (
+                                                <br />
                                                 <div>No Comments</div>
                                             )}
                                     </div>
