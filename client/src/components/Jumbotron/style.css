@@ -4,6 +4,10 @@
     background-size: contain;
 }
 
+button {
+    background-color: #6CAA01;
+}
+
 #title {
     text-shadow:4px 4px 2px rgba(150,150,150,0.1);
     font-weight: 600;

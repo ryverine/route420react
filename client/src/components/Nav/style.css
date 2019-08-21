@@ -1,4 +1,10 @@
 #dark {
     background-color: #212121;
     color: white;
+    font-size: 24px;
+}
+
+#link {
+    color: #6CAA01;
+    font-size: 18px;
 }
