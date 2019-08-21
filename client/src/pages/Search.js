@@ -3,6 +3,8 @@ import Jumbotron from "../components/Jumbotron";
 import Jumbotron2 from "../components/Jumbotron2";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
+import NewsArticles from "../components/NewsArticles";
+import Legality from "../components/Legality";
 
 
 class Search extends Component {
@@ -256,13 +258,33 @@ class Search extends Component {
                         </div>
                   ))}
                 </div>
+<<<<<<< HEAD
+                    ) : (
+                        <h4>No Results to Display</h4>
+                    )}
+         
+        </Jumbotron2>
+=======
               ) : (
                   <h4>No Results to Display</h4>
                 )}
 
             </Jumbotron2>
+>>>>>>> ef6a4a271e6b9db556fd16113353f378fd52ec7e
           </Col>
           <Col size="md-2"></Col>
+        </Row>
+
+        <Row>
+        <Col size="md-2"></Col>
+        <Col size="md-8">
+            <NewsArticles />
+        </Col>
+        <Col size="md-2"></Col>
+        </Row>
+
+        <Row>
+          <Legality />
         </Row>
       </Container>
     );
