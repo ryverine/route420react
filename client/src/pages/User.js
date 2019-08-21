@@ -262,13 +262,12 @@ class User extends Component {
                                                         {comment.comment}
                                                         <br />
 
-                                                        <DeleteBtn onClick={(e) => this.deleteComment(comment._id, e)}>Delete</DeleteBtn>
+                                                        <DeleteBtn onClick={(e) => this.deleteComment(comment._id, e)}> Delete </DeleteBtn>
 
                                                     </div>
                                                 ))}
                                             </div>
                                         ) : (
-                                                <br />
                                                 <div>No Comments</div>
                                             )}
                                     </div>
