@@ -1,8 +1,7 @@
 .jumbotron {
     background-color: #025F4F;
-    background-image: linear-gradient(to bottom right, #045E4F, hsl(170, 87%, 25%));
     color: white;
-
+    background-size: contain;
 }
 
 #title {
@@ -21,5 +20,7 @@
 
 #homeLogo {
     width: 250px;
+    margin: auto;    
+    display: block;
 }
 
