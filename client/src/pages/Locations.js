@@ -35,7 +35,7 @@ render() {
   <Row>
     <Col size="md-2"></Col>
     <Col size="md-8">
-
+      <br />
       <Jumbotron>
         <Row>
           <Col size="md-2"></Col>
@@ -50,7 +50,15 @@ render() {
           <Col size="md-1"></Col>
         </Row>
       </Jumbotron>
+      </Col>  {/* end of md-8 col */}
+      <Col size="md-2"></Col>
+  </Row>
 
+
+<Row>
+  <Col size="md-2"></Col>
+  <Col size="md-8">
+      <br />
 <Jumbotron2>
       <div>
         {this.state.locations.length ? (
@@ -78,12 +86,11 @@ render() {
         <h3>No Locations to Display</h3>
         )}
       </div>
+ </Jumbotron2>
+ </Col>  {/* end md-8 col */}
+ <Col size="md-2"></Col>
 
-      </Jumbotron2>
-
-    </Col>  {/* end of md-8 col */}
-    <Col size="md-2"></Col>
-  </Row>
+ </Row>
 </Container>
       
     );

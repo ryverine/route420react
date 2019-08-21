@@ -214,7 +214,6 @@ class Search extends Component {
           <Col size="md-8">
             <br />
             <Jumbotron>
-
               <Row>
               <Col size="md-1"></Col>
                 <Col size="md-7">
@@ -242,9 +241,9 @@ class Search extends Component {
                 <Col size="md-1"></Col>
               </Row>
             </Jumbotron>
-
-            <Col size="md-2"></Col>
             </Col>
+            <Col size="md-2"></Col>
+           
             </Row>
 
 {/* //===================================================================== */}
