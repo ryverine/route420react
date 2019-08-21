@@ -237,17 +237,19 @@ class Search extends Component {
                 <Col size="md-1"></Col>
               </Row>
             </Jumbotron>
-          </Col>
+          </Col> {/* end of col-md-8 */}
           <Col size="md-2"></Col>
 
         </Row>
 
-        {/* //===================================================================== */}
+        {/* //===================end of jumbotron row================================================== */}
 
         <Row>
           <Col size="md-2"></Col>
           <Col size="md-8">
             <br />
+
+          
             <Jumbotron2>
               {this.state.results.length ? (
                 <div>
