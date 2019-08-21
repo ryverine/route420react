@@ -38,12 +38,13 @@ render() {
       <br />
       <Jumbotron>
         <Row>
-          <Col size="md-2"></Col>
+          <Col size="md-1"></Col>
           <Col size="3">
             <img src="../../assets/images/route420-icon.svg" id="locLogo" />
           </Col>
+          <Col size="md-1"></Col>
           <Col size="md-6">
-            <h1 id="locationTitle">Store Locations</h1>
+            <h1 id="otherTitle">Store Locations</h1>
             
             <h2 id="subtitle">Browse dispensaries by city!</h2>
           </Col>
