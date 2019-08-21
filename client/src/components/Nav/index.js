@@ -17,13 +17,13 @@ function Nav() {
 
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="/" id="dark">Home </a>
+            <a className="nav-link" href="/" id="link">Home </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/locations" id="dark"> Locations </a>
+            <a className="nav-link" href="/locations" id="link"> Locations </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/user" id="dark"> Account</a>
+            <a className="nav-link" href="/user" id="link"> Account</a>
           </li>
         </ul>
       </div>
