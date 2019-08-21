@@ -209,47 +209,36 @@ class Search extends Component {
   }
 
 
+
   render() {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-2"> </Col>
+        <Col size="md-3"></Col>
 
-          <Col size="md-8">
+          <Col size="md-6">
             <br />
             <Jumbotron id="jumbotron">
 
               <Row>
-              <Col size="md-1"></Col>
-                <Col size="md-7">
+
+                <Col size="md-6">
                   <h1 id="title">Never be without CBD ever again.</h1>
                   <br />
                   <h2 id="subtitle">Find what you want and where it's sold.</h2>
-                  <br />
-
-                  <form className="form-inline mr-auto mb-4">
-
-                  <input className="form-control mr-sm-2" type="text" placeholder="Search for a Product!" aria-label="Search" />
-
-                  <button className="btn purple-gradient btn-rounded btn-sm my-0 waves-effect waves-light" type="submit">Find Product</button>
-
-                  </form>
 
                 </Col>
 
-          
-
-                <Col size="3">
+                <Col size="4">
                   <img src="../../assets/images/route420-icon.svg" id="homeLogo" />
                 </Col>
 
-                <Col size="md-1"></Col>
               </Row>
             </Jumbotron>
 
-            <Col size="md-2"></Col>
+            <Col size="md-3"></Col>
 
-{/* //==================================================================== */}
+{/* //================================================================================================= */}
             {/* <form>
               <Input
                 value={this.state.searchTerms}
@@ -265,14 +254,9 @@ class Search extends Component {
               </FormBtn>
             </form> */}
 
-{/* //==================================================================== */}
-
-
-
-
-{/* //===================================================================== */}
+{/* //================================================================================================= */}
             </Col>
-            
+            <Col size="md-2"></Col>
         </Row>
         <Row>
         <Col size="md-2"></Col>
