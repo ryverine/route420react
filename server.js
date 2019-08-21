@@ -10,15 +10,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("client/build")); // I THINK THIS IS PART OF THE PROBLEM
 }
 // Add routes, both API and view
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/route420");
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/route420");
 
-//mongoose.connect(process.env.MONGODB_URI || "mongodb://username1:password1@ds259347.mlab.com:59347/heroku_8jzpth02");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:password1@@ds311538.mlab.com:11538/heroku_4kmnt70r");
+
 
 // Start the API server
 app.listen(PORT, function() {
