@@ -229,9 +229,9 @@ class Search extends Component {
     return (
       <Container fluid>
         <Row>
-        <Col size="md-2"></Col>
+        <Col size="md-3"></Col>
 
-          <Col size="md-8">
+          <Col size="md-6">
             <br />
             <Jumbotron id="jumbotron">
 
@@ -240,19 +240,20 @@ class Search extends Component {
                 <Col size="md-6">
                   <h1 id="title">Never be without CBD ever again.</h1>
                   <br />
-                  <h2>Find what you want and where it's sold.</h2>
+                  <h2 id="subtitle">Find what you want and where it's sold.</h2>
 
                 </Col>
 
-                <Col size="5">
+                <Col size="4">
                   <img src="../../assets/images/route420-icon.svg" id="homeLogo" />
                 </Col>
 
               </Row>
             </Jumbotron>
-            {/*<div>
-              <NewsFeed />
-            </div>*/}
+
+            <Col size="md-3"></Col>
+
+           
             <form>
               <Input
                 value={this.state.searchTerms}
