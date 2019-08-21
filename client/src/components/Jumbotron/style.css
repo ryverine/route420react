@@ -14,3 +14,10 @@
     font-family: 'Cabin', sans-serif;
 }
 
+#subtitle {
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.5rem;
+}
+
