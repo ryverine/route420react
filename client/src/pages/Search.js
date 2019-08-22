@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import NewsArticles from "../components/NewsArticles";
+import Legality from "../components/Legality";
 import Jumbotron from "../components/Jumbotron";
 import Jumbotron2 from "../components/Jumbotron2";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
-import NewsArticles from "../components/NewsArticles";
-import Legality from "../components/Legality";
+
 
 
 class Search extends Component {

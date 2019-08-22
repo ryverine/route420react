@@ -57,7 +57,7 @@ export class Legality extends Component {
                         For more information about the permitting process, contact the Industrial Hemp Commission at <strong>(919) 707-3236</strong>.
                     </Dialog>
                 
-                    <Button label="Legal Disclaimer" icon="pi pi-external-link" onClick={this.onClick} className="LegalityButton" />
+                    <Button label="Legal Disclaimer" icon="pi pi-external-link" onClick={this.onClick} className="p-button-secondary" />
                 </div>
             </div>
         )

@@ -1,0 +1,21 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+.newsArticle {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#newsArticle {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+#LegalityButton {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
