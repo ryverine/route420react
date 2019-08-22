@@ -26,12 +26,11 @@ class Product extends Component {
 
   loadProduct = (pid) => {
     API.getProduct(pid)
-      .then(res => {
-          console.log("getProduct response:", res);
-        
+      .then(prodRes => {
+          console.log("getProduct response:", prodRes);
+
             var theStore = {};
-            console.log("theStore: ", theStore);
-        
+    
             API.getStore(sid).then(storeRes => 
             {
                 console.log("getStore response:", storeRes);
@@ -39,14 +38,13 @@ class Product extends Component {
                 theStore = storeRes.data;
                 
                 this.setState({ 
-                    name: res.data.name,
-                    brand: res.data.brand,
-                    description: res.data.description,
-                    type: res.data.type,
+                    name: prodRes.data.name,
+                    brand: prodRes.data.brand,
+                    description: prodRes.data.description,
+                    type: prodRes.data.type,
                     store: theStore
                 });
             }
-        }
       )
       .catch(err => console.log(err));
   };
