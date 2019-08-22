@@ -141,7 +141,7 @@ class Store extends Component {
                                 </Col>
                                 <Col size="md-1"></Col>
                                 <Col size="md-6">
-                                <h1 id="otherTitle">{this.state.name}</h1>
+                                <h1 id="otherTitleCenter">{this.state.name}</h1>
                 
                                 <h2 id="subtitle">One of Route420's trusted retailers! </h2>
                                 </Col>
@@ -158,8 +158,6 @@ class Store extends Component {
                 <br />
 
                 <Jumbotron2>
-                        
-                        {/* <h4>{this.state.name}</h4> */}
                         <div>
                             <h4>{this.state.addressLine1} 
                             <br />
@@ -202,28 +200,32 @@ class Store extends Component {
 
                 <Jumbotron2>
                         <div>
-                            <h4 id="underline">Community Discussion</h4>
+                            <h4 id="underline">Community Discussion:</h4>
                             <div>
                                 <form>
                                     <TextArea
                                     value={this.state.newComment}
                                     onChange={this.handleInputChange}
                                     name="newComment"
-                                    placeholder="Provide feedback..."
+                                    placeholder="Share your thoughts!"
                                     />
                                     <FormBtn
                                     disabled={!(this.state.newComment)}
                                     onClick={this.submitComment}
                                     >
                                     Submit Comment
-                                    </FormBtn><br /><br />
+                                    </FormBtn>
+                                    <br />
+                                    <br />
                                 </form>
                             </div>
+
                             {this.state.storecomments.length ? (
                                 <div>
                                     {this.state.storecomments.map(comment => (
                                         <div key={comment._id}> 
-                                            <strong>{comment.user} says...</strong><br /> 
+                                            <p id="username">{comment.user} says...</p>
+                                            <br /> 
                                             {comment.comment}<br />
                                             Posted: {comment.updated}
                                             {theCurrentUser === comment.user ? 
