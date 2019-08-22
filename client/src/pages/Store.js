@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-//import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { TextArea, FormBtn } from "../components/Form";
 import DeleteBtn from "../components/DeleteBtn";
-//import { List, ListItem } from "../components/List";
 
 
 class Store extends Component {
@@ -136,6 +134,8 @@ class Store extends Component {
                         <Jumbotron>
                             <h1>Store Page</h1>
                         </Jumbotron>
+
+                        
                         <h4>{this.state.name}</h4>
                         <div>
                             {this.state.addressLine1} <br />

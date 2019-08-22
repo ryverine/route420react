@@ -45,3 +45,9 @@ button {
     color: white;
 }
 
+#grad1 {
+    height: 100%;
+    background-color: #025F4F; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, #045E4F, #0cc7a7); /* Standard syntax (must be last) */
+    background-repeat: no-repeat;
+}
