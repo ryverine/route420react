@@ -223,7 +223,7 @@ class Search extends Component {
 
                       <input className="form-control mr-sm-2" type="text" placeholder="Search for a Product!" aria-label="Search" />
 
-                      <button className="btn purple-gradient btn-rounded btn-sm my-0 waves-effect waves-light" type="submit">Find Product</button>
+                      <button className="btn-rounded btn-sm" type="submit">Find Product</button>
 
                     </form>
                   </div>
@@ -261,14 +261,16 @@ class Search extends Component {
                   ))}
                 </div>
               ) : (
-                  <h4>No Results to Display</h4>
+                  <h4 id="white">No Results to Display</h4>
                 )}
 
             </Jumbotron2>
           </Col>
           <Col size="md-2"></Col>
         </Row>
+ {/* //================end of results tron====================*/}
 
+ <br />
         <Row>
         <Col size="md-2"></Col>
         <Col size="md-8">

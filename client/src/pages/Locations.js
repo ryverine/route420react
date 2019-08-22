@@ -84,7 +84,7 @@ render() {
         ))} 
         </div>
         ) : (
-        <h3>No Locations to Display</h3>
+        <h3 id="white">No Locations to Display</h3>
         )}
       </div>
  </Jumbotron2>
