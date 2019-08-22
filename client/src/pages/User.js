@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
+import Jumbotron2 from "../components/Jumbotron2";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { Input, FormBtn } from "../components/Form";
@@ -207,33 +208,33 @@ class User extends Component {
                                     <Col size="md-6">
                                         <h1 id="otherTitle">Route 420</h1>
 
-                                        <h2 id="subtitle">Welcome to your profile! Access comment history below </h2>
+                                        <h2 id="subtitle">Welcome back, {this.state.firstName}! </h2>
+
+                                        <form>
+                                            <FormBtn
+                                            onClick={this.doSignOut}
+                                            >
+                                            Sign-Out
+                                            </FormBtn>
+                                        </form>
+
                                     </Col>
                                     <Col size="md-1"></Col>
                                 </Row>
-                            </Jumbotron>
+                        </Jumbotron>
+                        </Col>
+                        <Col size="md-2"></Col>
+                    </Row>
 
-                            
-
-                            <form>
-                                <FormBtn
-                                    onClick={this.doSignOut}
-                                >
-                                    Sign-Out
-                                 </FormBtn>
-
-                            </form>
-
+                    <Row>
+                    <Col size="md-2"></Col>
+                    <Col size="md-8">
+                    <Jumbotron2>
+                        
                             <div>
-                                <h4>Welcome back, {this.state.firstName}!</h4>
-
-                                
-
                                 <div>
                                     Name: {this.state.firstName} {this.state.lastName}
                                 </div>
-
-                                
 
                                 <div>
                                     Email: {this.state.email}
@@ -241,21 +242,21 @@ class User extends Component {
 
                                 {this.state.admin ? (
                                     <div> 
-                                    <strong> <a href="admin/">Admin Dashboard</a> </strong> 
+                                    <strong> <a href="admin/">Click here for Vendor Dashboard</a> </strong> 
                                     </div>
                                 ) : (
                                         <React.Fragment />
                                     )}
                                 <div>
                                 
-                                    <h4>Comment History</h4>
+                                    <h3 id="productName">Comment History:</h3>
                                     
                                     <div>
                                         {this.state.storecomments.length ? (
                                             <div>
                                                 {this.state.storecomments.map(comment => (
                                                     <div key={comment._id}>
-                                                        <strong> <a href={"store/" + comment.store}> Store Name </a> </strong>
+                                                        <strong> <a href={"store/" + comment.store}> {this.state.store.name} </a> </strong>
                                                         
                                                         Posted: {comment.updated}
                                                         
@@ -274,6 +275,7 @@ class User extends Component {
 
                                 </div>
                             </div>
+                            </Jumbotron2>
                         </Col>
                         <Col size="md-2"></Col>
                     </Row>
