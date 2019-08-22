@@ -3,17 +3,17 @@ import "./style.css";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-dark bg-dark" id="dark">
+    <nav className="navbar navbar-expand-md bg-dark navbar-dark" id="dark">
 
       <img src="../../assets/images/route420.png" alt="logo" />
 
       <a className="navbar-brand" href="/" id="dark">Route 420</a>
 
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarNav">
+      <div className="collapse navbar-collapse" id="collapsibleNavbar">
 
         <ul className="navbar-nav">
           <li className="nav-item">
