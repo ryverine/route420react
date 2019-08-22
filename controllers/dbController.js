@@ -59,6 +59,7 @@ module.exports = {
   findProductById: function(req, res) {
     db.Product
       .findById(req.params.id)
+      .populate("stores")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
