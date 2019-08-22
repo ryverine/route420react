@@ -31,7 +31,7 @@ class Product extends Component {
 
             var theStore = {};
     
-            API.getStore(sid).then(storeRes => 
+            API.getStore(prodRes.data.store).then(storeRes => 
             {
                 console.log("getStore response:", storeRes);
                 
