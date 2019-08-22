@@ -126,7 +126,7 @@ class Search extends Component {
             <Jumbotron2>
               {this.state.results.length ? (
                 <div>
-                  <h4 id="underline">Products Found:</h4>
+                  <h4 id="underline">Products Found :</h4>
                   {this.state.results.map(product => (
                     <div key={product._id}>
                       <a href={"/product/" + product._id}><strong>{product.name}</strong></a> ({product.brand})

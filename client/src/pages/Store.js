@@ -174,7 +174,7 @@ class Store extends Component {
                         <div>{this.state.description}</div>
                         <br />
                         <div>
-                            <h4 id="underline">Available Products</h4>
+                            <h4 id="underline">Available Products: </h4>
                             {this.state.products.length ? (
                                 <div>
                                     {this.state.products.map(product => (

@@ -66,11 +66,15 @@ render() {
         <div>
         {this.state.locations.map(location => (
         <div key={location._id}> 
-        <strong> {location.city}, {location.state} </strong>
+
+        <h3 id="productName"> {location.city}, {location.state} </h3>
+
         {location.stores.length ? (
         <div> {location.stores.map(store => (
         <div key={store._id}>
-        <strong> <a href={"store/" + store._id}>{store.name} </a></strong><br />
+
+        <strong> <a href={"store/" + store._id}>{store.name} </a> </strong>
+        <br />
         {store.addressLine1}
         <br />
         {store.city}, {store.state} {store.zip}

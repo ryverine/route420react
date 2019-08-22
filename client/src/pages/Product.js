@@ -97,7 +97,7 @@ class Product extends Component {
                         <br />
                         <br />
                         <div>
-                            <h3>Related Tags:</h3>
+                            <h3 id="productName">Related Tags:</h3>
                             {this.state.type.length ? (
                                 <span>
                                     {this.state.type.map(tag => (
@@ -123,7 +123,7 @@ class Product extends Component {
 
                 <Jumbotron2>
                         <div>
-                            <h3 id="underline">Available in these Stores:</h3>
+                            <h3 id="productName">Available in these Stores:</h3>
                             {this.state.store.name ? (
                                 <span>
                                     <strong> <a href={"store/" + this.state.store._id}>{this.state.store.name}</a></strong><br />
