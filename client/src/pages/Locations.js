@@ -71,9 +71,9 @@ render() {
         <div> {location.stores.map(store => (
         <div key={store._id}>
 
-        <strong> <a href={"store/" + store._id}>{store.name} </a> </strong>
-        {store.addressLine1}
-        {store.city}, {store.state} {store.zip}
+        <strong> <a href={"store/" + store._id}>{store.name} </a> </strong> <br />
+        {store.addressLine1} <br />
+        {store.city}, {store.state} {store.zip} <br />
         </div>
         ))}
         </div>
