@@ -3,7 +3,7 @@ import "./style.css";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light" id="dark">
+    <nav className="navbar navbar-dark bg-dark" id="dark">
 
       <img src="../../assets/images/route420.png" alt="logo" />
 
