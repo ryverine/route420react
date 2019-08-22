@@ -155,24 +155,24 @@ class Store extends Component {
                 <Row>
                 <Col size="md-2"></Col>
                 <Col size="md-8">
-                <br />
+                
 
                 <Jumbotron2>
                         <div>
                             <h4>{this.state.addressLine1} 
-                            <br />
+                            
                             {this.state.addressLine2.length ? (
                                 <span>
-                                    {this.state.addressLine2} <br />
+                                    {this.state.addressLine2} 
                                 </span>
                                 ) : (
                                     <span></span>
                                 )}
                             {this.state.city}, {this.state.state} {this.state.zip} </h4>
                         </div>
-                        <br />
+                        
                         <div>{this.state.description}</div>
-                        <br />
+                        
                         <div>
                             <h4 id="underline">Available Products: </h4>
                             {this.state.products.length ? (
@@ -196,7 +196,7 @@ class Store extends Component {
                 <Row>
                 <Col size="md-2"></Col>
                 <Col size="md-8">
-                <br />
+                
 
                 <Jumbotron2>
                         <div>
@@ -215,8 +215,8 @@ class Store extends Component {
                                     >
                                     Submit Comment
                                     </FormBtn>
-                                    <br />
-                                    <br />
+                                    
+                                    
                                 </form>
                             </div>
 
@@ -226,8 +226,8 @@ class Store extends Component {
                                         <div key={comment._id}> 
                                             <p id="username">{comment.user} says...</p>
                                             {comment.comment}
-                                            <br />
-                                            Posted: {comment.updated} <br />
+                                            
+                                            Posted: {comment.updated} 
                                             
                                             {theCurrentUser === comment.user ? 
                                                 <div>
@@ -238,7 +238,7 @@ class Store extends Component {
                                 </div>
                             ) : (
                                 <div>No Comments</div>
-                            )} <br />
+                            )} 
                         </div>
                 </Jumbotron2>
                 </Col>

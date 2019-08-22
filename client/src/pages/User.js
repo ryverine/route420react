@@ -134,7 +134,7 @@ class User extends Component {
                     <Row>
                         <Col size="md-2"></Col>
                         <Col size="md-8">
-                            <br />
+                            
                             <Jumbotron>
                                 <Row>
                                     <Col size="md-1"></Col>
@@ -158,7 +158,7 @@ class User extends Component {
                     <Row>
                         <Col size="md-2"></Col>
                         <Col size="md-8">
-                            <br />
+                            
                             <form>
                                 <Input
                                     type="email"
@@ -167,7 +167,7 @@ class User extends Component {
                                     name="email"
                                     placeholder="Email (required)"
                                 />
-                                <br />
+                                
                                 <Input
                                     type="password"
                                     value={this.state.password}
@@ -175,7 +175,7 @@ class User extends Component {
                                     name="password"
                                     placeholder="Password (required)"
                                 />
-                                <br />
+                                
                                 <FormBtn
                                     disabled={!(this.state.email)}
                                     onClick={this.doSignIn}
@@ -213,7 +213,7 @@ class User extends Component {
                                 </Row>
                             </Jumbotron>
 
-                            <br />
+                            
 
                             <form>
                                 <FormBtn
@@ -227,13 +227,13 @@ class User extends Component {
                             <div>
                                 <h4>Welcome back, {this.state.firstName}!</h4>
 
-                                <br />
+                                
 
                                 <div>
                                     Name: {this.state.firstName} {this.state.lastName}
                                 </div>
 
-                                <br />
+                                
 
                                 <div>
                                     Email: {this.state.email}
@@ -247,20 +247,20 @@ class User extends Component {
                                         <React.Fragment />
                                     )}
                                 <div>
-                                <br />
+                                
                                     <h4>Comment History</h4>
-                                    <br />
+                                    
                                     <div>
                                         {this.state.storecomments.length ? (
                                             <div>
                                                 {this.state.storecomments.map(comment => (
                                                     <div key={comment._id}>
                                                         <strong> <a href={"store/" + comment.store}> Store Name </a> </strong>
-                                                        <br />
+                                                        
                                                         Posted: {comment.updated}
-                                                        <br />
+                                                        
                                                         {comment.comment}
-                                                        <br />
+                                                        
 
                                                         <DeleteBtn onClick={(e) => this.deleteComment(comment._id, e)}> Delete </DeleteBtn>
 

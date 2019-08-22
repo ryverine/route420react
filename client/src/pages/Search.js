@@ -78,15 +78,15 @@ class Search extends Component {
         <Row>
           <Col size="md-2"> </Col>
           <Col size="md-8">
-            <br />
+           
             <Jumbotron>
               <Row>
                 <Col size="md-1"></Col>
                 <Col size="md-7">
                   <h1 id="title">Never be without CBD ever again.</h1>
-                  <br />
+                 
                   <h2 id="subtitle">Find what you want and where it's sold!</h2>
-                  <br />
+                 
 
                   <div className="form">
                     <form className="form-inline mr-auto mb-4">
@@ -120,7 +120,7 @@ class Search extends Component {
         <Row>
           <Col size="md-2"></Col>
           <Col size="md-8">
-            <br />
+           
 
           
             <Jumbotron2>
@@ -143,7 +143,7 @@ class Search extends Component {
         </Row>
  {/* //================end of results tron====================*/}
 
- <br />
+
         <Row>
         <Col size="md-2"></Col>
         <Col size="md-8">
