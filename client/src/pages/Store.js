@@ -238,7 +238,7 @@ class Store extends Component {
                                 </div>
                             ) : (
                                 <div>No Comments</div>
-                            )}
+                            )} <br />
                         </div>
                 </Jumbotron2>
                 </Col>
