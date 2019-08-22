@@ -97,7 +97,7 @@ class Product extends Component {
                         <br />
                         <br />
                         <div>
-                            <h4>Related Tags:</h4>
+                            <h3>Related Tags:</h3>
                             {this.state.type.length ? (
                                 <span>
                                     {this.state.type.map(tag => (
@@ -110,9 +110,20 @@ class Product extends Component {
                                 <div>No Tags</div>
                             )}
                         </div>
+                         </div>
+                        </Jumbotron2>
+                </Col>
+                <Col size="md-2"></Col>
+                </Row>
 
+                <Row>
+                <Col size="md-2"></Col>
+                <Col size="md-8">
+                <br />
+
+                <Jumbotron2>
                         <div>
-                            <h4>Available in these Stores:</h4>
+                            <h3 id="underline">Available in these Stores:</h3>
                             {this.state.store.name ? (
                                 <span>
                                     <strong> <a href={"store/" + this.state.store._id}>{this.state.store.name}</a></strong><br />
@@ -124,11 +135,9 @@ class Product extends Component {
                                 <div>Currently not available in any stores.</div>
                             )}
                         </div>
-
-                        </div>
-                    </Jumbotron2>
-                    </Col>
-                    <Col size="md-2"></Col>
+                </Jumbotron2>
+                </Col>
+                <Col size="md-2"></Col>
                 </Row>
             </Container>
         );
