@@ -45,4 +45,6 @@ button {
     color: white;
 }
 
-
+#productName {
+    text-decoration: underline;
+}
