@@ -7,12 +7,13 @@ import { Col, Row, Container } from "../components/Grid";
 //import { List, ListItem } from "../components/List";
 
 
-class Saved extends Component {
+class Product extends Component {
     state = {
         name: "",
         brand: "",
         description: "",
-        type: []
+        type: [],
+        store: {}
     };
 
     componentDidMount() 
@@ -33,7 +34,8 @@ class Saved extends Component {
                 name: res.data.name,
                 brand: res.data.brand,
                 description: res.data.description,
-                type: res.data.type
+                type: res.data.type,
+                store: store
             });
         }
       )
@@ -110,4 +112,4 @@ class Saved extends Component {
     }
 }
 
-export default Saved;
+export default Product;
