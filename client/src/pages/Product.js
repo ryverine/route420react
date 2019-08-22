@@ -44,10 +44,10 @@ class Product extends Component {
                     type: prodRes.data.type,
                     store: theStore
                 });
-            }
-      )
+            });
+    })
       .catch(err => console.log(err));
-  };
+  }
 
 
 
