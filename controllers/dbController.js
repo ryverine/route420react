@@ -80,10 +80,21 @@ module.exports = {
           }
         }
       }])
-      //.find(req.params.terms)
-      // .findOne({'email': creds[0], 'password': creds[1]})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+    
+        // using expr for mLab: https://blog.mlab.com/2018/08/use-aggregation-expressions-in-queries-with-expr/
+      /*db.Product
+      //.find({name: reformatTerms})
+      .find([{
+        $expr: {
+        
+          name: {
+            $regex: reformatTerms,
+            $options: 'i'// case insensitive (https://docs.mongodb.com/manual/reference/operator/query/regex/#op._S_regex)
+          
+        }}
+      }])*/
   },
   // findProductByBrand
   // findProductByTag
