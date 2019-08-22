@@ -35,7 +35,7 @@ class Product extends Component {
                 brand: res.data.brand,
                 description: res.data.description,
                 type: res.data.type,
-                store: store
+                store: res.data.store
             });
         }
       )
