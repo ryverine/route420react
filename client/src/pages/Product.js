@@ -111,6 +111,20 @@ class Product extends Component {
                             )}
                         </div>
 
+                        <div>
+                            <h4>Available in these Stores:</h4>
+                            {this.state.store.name ? (
+                                <span>
+                                    <strong> <a href={"store/" + this.state.store._id}>{this.state.store.name}</a></strong><br />
+                                    {this.state.store.addressLine1}
+                                    <br />
+                                    {this.state.store.city}, {this.state.store.state} {this.state.store.zip}
+                                </span>
+                            ) : (
+                                <div>Currently not available in any stores.</div>
+                            )}
+                        </div>
+
                         </div>
                     </Jumbotron2>
                     </Col>
