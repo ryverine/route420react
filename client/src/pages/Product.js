@@ -73,29 +73,34 @@ class Saved extends Component {
 
                     <Jumbotron2>
                         <div>   
-                        <h4>{this.state.name}</h4>
+                        <h3>{this.state.name}</h3>
                        
                         <div>
-                            {this.state.brand}
+                           From: {this.state.brand}
                         </div>
+                        <br />
+
                         <div>
                             {this.state.description}
                         </div>
+                        <br />
+                        <br />
                         <div>
                             <h4>Related Terms (tags)</h4>
                             {this.state.type.length ? (
-                                <div>
+                                <span>
                                     {this.state.type.map(tag => (
                                         <div key={tag}> 
                                             {tag}
                                         </div>
                                     ))}
-                                </div>
+                                </span>
                             ) : (
                                 <div>No Tags</div>
                             )}
                         </div>
-                    </div>
+
+                        </div>
                     </Jumbotron2>>
                     </Col>
                     <Col size="md-2"></Col>
