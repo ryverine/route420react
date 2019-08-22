@@ -225,9 +225,10 @@ class Store extends Component {
                                     {this.state.storecomments.map(comment => (
                                         <div key={comment._id}> 
                                             <p id="username">{comment.user} says...</p>
-                                            <br /> 
-                                            {comment.comment}<br />
-                                            Posted: {comment.updated}
+                                            {comment.comment}
+                                            <br />
+                                            Posted: {comment.updated} <br />
+                                            
                                             {theCurrentUser === comment.user ? 
                                                 <div>
                                                     <DeleteBtn onClick={(e) => this.deleteComment(comment._id, e)}>Delete</DeleteBtn>
