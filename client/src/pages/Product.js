@@ -28,17 +28,30 @@ class Product extends Component {
     API.getProduct(pid)
       .then(res => {
           console.log("getProduct response:", res);
-            this.setState({ 
-                name: res.data.name,
-                brand: res.data.brand,
-                description: res.data.description,
-                type: res.data.type,
-                store: res.data.store
-            });
+        
+            var theStore = {};
+            console.log("theStore: ", theStore);
+        
+            API.getStore(sid).then(storeRes => 
+            {
+                console.log("getStore response:", storeRes);
+                
+                theStore = storeRes.data;
+                
+                this.setState({ 
+                    name: res.data.name,
+                    brand: res.data.brand,
+                    description: res.data.description,
+                    type: res.data.type,
+                    store: theStore
+                });
+            }
         }
       )
       .catch(err => console.log(err));
   };
+
+
 
     render() {
         return (
