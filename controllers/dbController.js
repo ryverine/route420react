@@ -85,11 +85,11 @@ module.exports = {
       //.find({name: reformatTerms})
       .find([{
         $expr: {
-        $match: {
+        
           name: {
             $regex: reformatTerms,
             $options: 'i'// case insensitive (https://docs.mongodb.com/manual/reference/operator/query/regex/#op._S_regex)
-          }
+          
         }}
       }])
       //.find(req.params.terms)
