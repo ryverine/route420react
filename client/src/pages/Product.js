@@ -71,7 +71,7 @@ class Saved extends Component {
 
                     <Jumbotron2>
                         <div>   
-                        <h3 id="productName">{this.state.name}</h3>
+                        <h3 id="underline">{this.state.name}</h3>
                        
                         <div>
                            From: {this.state.brand}
