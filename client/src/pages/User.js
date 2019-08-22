@@ -247,8 +247,8 @@ class User extends Component {
                                         <React.Fragment />
                                     )}
                                 <div>
-                                
-                                    <h4>Comment History</h4>
+                                <br />
+                                    <h4 id="underline">Comment History:</h4>
                                     
                                     <div>
                                         {this.state.storecomments.length ? (
@@ -261,7 +261,7 @@ class User extends Component {
                                                         
                                                         {comment.comment}
                                                         
-
+<br />
                                                         <DeleteBtn onClick={(e) => this.deleteComment(comment._id, e)}> Delete </DeleteBtn>
 
                                                     </div>
