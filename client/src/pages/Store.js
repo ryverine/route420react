@@ -160,7 +160,7 @@ class Store extends Component {
                 <Jumbotron2>
                         <div>
                             <h4>{this.state.addressLine1} 
-                            
+                            <br />
                             {this.state.addressLine2.length ? (
                                 <span>
                                     {this.state.addressLine2} 
@@ -168,12 +168,14 @@ class Store extends Component {
                                 ) : (
                                     <span></span>
                                 )}
-                            {this.state.city}, {this.state.state} {this.state.zip} </h4>
+                                <br />
+                                {this.state.city}, {this.state.state} {this.state.zip} </h4>
                         </div>
                         
                         <div>{this.state.description}</div>
                         
                         <div>
+                        <br />
                             <h4 id="underline">Available Products: </h4>
                             {this.state.products.length ? (
                                 <div>

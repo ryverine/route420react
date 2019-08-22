@@ -123,9 +123,10 @@ class Product extends Component {
                             <h3 id="productName">Available in these Stores:</h3>
                             {this.state.store.name ? (
                                 <span>
-                                    <strong> <a href={"/store/" + this.state.store._id}>{this.state.store.name}</a></strong>
+                                    <strong> <a href={"store/" + this.state.store._id}>{this.state.store.name}</a></strong>
+                                    <br />
                                     {this.state.store.addressLine1}
-                                    
+                                    <br />
                                     {this.state.store.city}, {this.state.store.state} {this.state.store.zip}
                                 </span>
                             ) : (
