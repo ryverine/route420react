@@ -73,11 +73,11 @@ module.exports = {
     db.Product
       //.find({name: reformatTerms})
       .aggregate([{
-        $match: {
+        $match: {$expr : {
           name: {
             $regex: reformatTerms,
             $options: 'i'// case insensitive (https://docs.mongodb.com/manual/reference/operator/query/regex/#op._S_regex)
-          }
+          }}
         }
       }])
       .then(dbModel => res.json(dbModel))
