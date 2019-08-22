@@ -35,7 +35,6 @@ render() {
   <Row>
     <Col size="md-2"></Col>
     <Col size="md-8">
-      <br />
       <Jumbotron>
         <Row>
           <Col size="md-1"></Col>
@@ -59,7 +58,6 @@ render() {
 <Row>
   <Col size="md-2"></Col>
   <Col size="md-8">
-      <br />
 <Jumbotron2>
       <div>
         {this.state.locations.length ? (
@@ -74,9 +72,7 @@ render() {
         <div key={store._id}>
 
         <strong> <a href={"store/" + store._id}>{store.name} </a> </strong>
-        <br />
         {store.addressLine1}
-        <br />
         {store.city}, {store.state} {store.zip}
         </div>
         ))}

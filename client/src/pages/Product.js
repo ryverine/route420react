@@ -49,15 +49,12 @@ class Product extends Component {
       .catch(err => console.log(err));
   }
 
-
-
     render() {
         return (
             <Container fluid>
                 <Row>
                     <Col size="md-2"></Col>
                     <Col size="md-8">
-                    <br />
                         <Jumbotron>
                             <Row>
                                 <Col size="md-1"></Col>
@@ -80,7 +77,7 @@ class Product extends Component {
                 <Row>
                 <Col size="md-2"></Col>
                 <Col size="md-8">
-                    <br />
+                    
 
                     <Jumbotron2>
                         <div>   
@@ -89,13 +86,13 @@ class Product extends Component {
                         <div>
                            From: {this.state.brand}
                         </div>
-                        <br />
+                        
 
                         <div>
                             {this.state.description}
                         </div>
-                        <br />
-                        <br />
+                        
+                        
                         <div>
                             <h3 id="productName">Related Tags:</h3>
                             {this.state.type.length ? (
@@ -119,16 +116,16 @@ class Product extends Component {
                 <Row>
                 <Col size="md-2"></Col>
                 <Col size="md-8">
-                <br />
+                
 
                 <Jumbotron2>
                         <div>
                             <h3 id="productName">Available in these Stores:</h3>
                             {this.state.store.name ? (
                                 <span>
-                                    <strong> <a href={"store/" + this.state.store._id}>{this.state.store.name}</a></strong><br />
+                                    <strong> <a href={"store/" + this.state.store._id}>{this.state.store.name}</a></strong>
                                     {this.state.store.addressLine1}
-                                    <br />
+                                    
                                     {this.state.store.city}, {this.state.store.state} {this.state.store.zip}
                                 </span>
                             ) : (
