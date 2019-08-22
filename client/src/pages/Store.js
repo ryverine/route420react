@@ -132,14 +132,37 @@ class Store extends Component {
                 <Row>
                     <Col size="md-2"></Col>
                     <Col size="md-8">
-                        <Jumbotron>
-                            <h1>Store Page</h1>
-                        </Jumbotron>
 
+                        <Jumbotron>
+                        <Row>
+                                <Col size="md-1"></Col>
+                                <Col size="3">
+                                    <img src="../../assets/images/route420-icon.svg" id="locLogo" />
+                                </Col>
+                                <Col size="md-1"></Col>
+                                <Col size="md-6">
+                                <h1 id="otherTitle">{this.state.name}</h1>
+                
+                                <h2 id="subtitle">One of Route420's trusted retailers! </h2>
+                                </Col>
+                                <Col size="md-1"></Col>
+                            </Row>  
+                        </Jumbotron>
+                    </Col>
+                    <Col size="md-2"></Col>
+                </Row>
+
+                <Row>
+                <Col size="md-2"></Col>
+                <Col size="md-8">
+                <br />
+
+                <Jumbotron2>
                         
-                        <h4>{this.state.name}</h4>
+                        {/* <h4>{this.state.name}</h4> */}
                         <div>
-                            {this.state.addressLine1} <br />
+                            <h4>{this.state.addressLine1} 
+                            <br />
                             {this.state.addressLine2.length ? (
                                 <span>
                                     {this.state.addressLine2} <br />
@@ -147,12 +170,13 @@ class Store extends Component {
                                 ) : (
                                     <span></span>
                                 )}
-                            {this.state.city}, {this.state.state} {this.state.zip}
+                            {this.state.city}, {this.state.state} {this.state.zip} </h4>
                         </div>
+                        <br />
                         <div>{this.state.description}</div>
-
+                        <br />
                         <div>
-                            <h4>Available Products</h4>
+                            <h4 id="underline">Available Products</h4>
                             {this.state.products.length ? (
                                 <div>
                                     {this.state.products.map(product => (
@@ -165,9 +189,20 @@ class Store extends Component {
                                 <div>No Products</div>
                             )}
                         </div>
+                </Jumbotron2>
+                </Col>
+                <Col size="md-2"></Col>
+                </Row>
 
+
+                <Row>
+                <Col size="md-2"></Col>
+                <Col size="md-8">
+                <br />
+
+                <Jumbotron2>
                         <div>
-                            <h4>Community Discussion</h4>
+                            <h4 id="underline">Community Discussion</h4>
                             <div>
                                 <form>
                                     <TextArea
@@ -202,7 +237,8 @@ class Store extends Component {
                                 <div>No Comments</div>
                             )}
                         </div>
-                    </Col>
+                </Jumbotron2>
+                </Col>
                     <Col size="md-2"></Col>
                 </Row>
             </Container>
