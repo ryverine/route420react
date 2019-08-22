@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 //import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
+import Jumbotron2 from "../components/Jumbotron2";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 //import { List, ListItem } from "../components/List";
@@ -45,10 +46,33 @@ class Saved extends Component {
                 <Row>
                     <Col size="md-2"></Col>
                     <Col size="md-8">
+                    <br />
                         <Jumbotron>
-                            <h1>Product Page</h1>
+                            <Row>
+                                <Col size="md-1"></Col>
+                                <Col size="3">
+                                    <img src="../../assets/images/route420-icon.svg" id="locLogo" />
+                                </Col>
+                                <Col size="md-1"></Col>
+                                <Col size="md-6">
+                                <h1 id="otherTitle">CBD Products</h1>
+                
+                                <h2 id="subtitle">Here you can explore our collection and find the best option for you! </h2>
+                                </Col>
+                                <Col size="md-1"></Col>
+                            </Row>         
                         </Jumbotron>
-                        
+                    </Col>  {/* end of md-8 col */}
+                    <Col size="md-2"></Col>
+                </Row>
+
+                <Row>
+                <Col size="md-2"></Col>
+                <Col size="md-8">
+                    <br />
+
+                    <Jumbotron2>
+                        <div>   
                         <h4>{this.state.name}</h4>
                        
                         <div>
@@ -71,7 +95,8 @@ class Saved extends Component {
                                 <div>No Tags</div>
                             )}
                         </div>
-                      
+                    </div>
+                    </Jumbotron2>>
                     </Col>
                     <Col size="md-2"></Col>
                 </Row>
