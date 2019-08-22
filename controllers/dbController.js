@@ -70,7 +70,7 @@ module.exports = {
     console.log("(controllers/dbController.js) reformatTerms: " + reformatTerms);
     //https://docs.mongodb.com/manual/reference/operator/aggregation/match/
     //var regexStr = "/"+reformatTerms+"/";
-    db.Product
+    /*db.Product
       //.find({name: reformatTerms})
       .aggregate([{
         $match: {
@@ -79,6 +79,18 @@ module.exports = {
             $options: 'i'// case insensitive (https://docs.mongodb.com/manual/reference/operator/query/regex/#op._S_regex)
           }
         }
+      }])*/
+    // using expr for mLab: https://blog.mlab.com/2018/08/use-aggregation-expressions-in-queries-with-expr/
+      db.Product
+      //.find({name: reformatTerms})
+      .find([{
+        $expr: {
+        $match: {
+          name: {
+            $regex: reformatTerms,
+            $options: 'i'// case insensitive (https://docs.mongodb.com/manual/reference/operator/query/regex/#op._S_regex)
+          }
+        }}
       }])
       //.find(req.params.terms)
       // .findOne({'email': creds[0], 'password': creds[1]})
