@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
+import Jumbotron2 from "../components/Jumbotron2";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { TextArea, FormBtn } from "../components/Form";
