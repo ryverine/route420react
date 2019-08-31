@@ -181,7 +181,7 @@ class Store extends Component {
                                 <div>
                                     {this.state.products.map(product => (
                                         <div key={product._id}> 
-                                            <strong><a href={"/product/" + product._id}>{product.name}</a></strong> ({product.brand})
+                                            <strong><a className="internalLink" href={"/product/" + product._id}>{product.name}</a></strong> ({product.brand})
                                         </div>
                                     ))}
                                 </div>
