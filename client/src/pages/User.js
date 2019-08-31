@@ -241,7 +241,7 @@ class User extends Component {
 
                                 {this.state.admin ? (
                                     <div> 
-                                    <strong> <a href="admin/">Admin Dashboard</a> </strong> 
+                                    <strong> <a className="internalLink" href="admin/">Admin Dashboard</a> </strong> 
                                     </div>
                                 ) : (
                                         <React.Fragment />
@@ -255,7 +255,7 @@ class User extends Component {
                                             <div>
                                                 {this.state.storecomments.map(comment => (
                                                     <div key={comment._id}>
-                                                        <strong> <a href={"store/" + comment.store}> Store Name </a> </strong>
+                                                        <strong> <a className="internalLink" href={"store/" + comment.store}> Store Name </a> </strong>
                                                         
                                                         Posted: {comment.updated}
                                                         
