@@ -1,6 +1,7 @@
 # Route 420
 
 [Deployed App](https://route420react.herokuapp.com/)
+ * Use "user@email.com” and “welcome1” to sign in under test user account.
 
 Cataloging stores in North Carolina that sell CBD products.
 
