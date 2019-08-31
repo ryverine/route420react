@@ -4,3 +4,7 @@
   background-image: linear-gradient(to bottom right, #045E4F, #0cc7a7); /* Standard syntax (must be last) */
   background-repeat: no-repeat;
 }
+
+.internalLink{
+  color: #ffc299;
+}
