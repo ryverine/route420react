@@ -129,7 +129,7 @@ class Search extends Component {
                   <h4 id="underline">Products Found :</h4>
                   {this.state.results.map(product => (
                     <div key={product._id}>
-                      <a href={"/product/" + product._id}><strong>{product.name}</strong></a> ({product.brand})
+                      <a className="internalLink" href={"/product/" + product._id}><strong>{product.name}</strong></a> ({product.brand})
                         </div>
                   ))}
                 </div>
