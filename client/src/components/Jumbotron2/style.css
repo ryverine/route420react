@@ -56,3 +56,11 @@ h4 {
 div {
     color: white;
 }
+
+.internalLink{
+  color: #ffc299;
+}
+
+.internalLink:hover{
+  color: #ffe0cc;
+}
