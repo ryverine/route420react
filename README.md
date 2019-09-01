@@ -5,6 +5,16 @@
 
 Cataloging stores in North Carolina that sell CBD products.
 
+## Team
+
+__Isabella__ | https://github.com/merendinoir | Primary front-end dev. Working with Node, React, HTML, and CSS.
+
+__Ryan__ | https://github.com/ryverine | Primary back-end dev. Working with Node, React, and Mongo DB.
+
+__Jared__ | https://github.com/jdwuxui | Secondary back-end dev and tester.
+
+__Matt__ | https://github.com/JustMrMatt | Secondary front-end dev and tester.
+
 ## Technologies
 
  * HTML
